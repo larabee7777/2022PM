@@ -1,0 +1,40 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x",
+    "npm": "6.14.15"
+  },
+  "description": "My webpack project",
+  "main": "index.js",
+  "dependencies": {
+    "@popperjs/core": "^2.10.2",
+    "babel-loader": "^8.2.3",
+    "bootstrap": "^5.1.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "heroku": "^7.59.1",
+    "mongodb": "^4.2.0",
+    "mongoose": "^6.0.14",
+    "nodemon": "^2.0.15",
+    "workbox-webpack-plugin": "^6.4.2",
+    "yarn": "^1.22.17"
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^2.4.1",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
