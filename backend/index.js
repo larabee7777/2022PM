@@ -1,9 +1,12 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
+const { end } = require("@popperjs/core");
 
 const app = express();
 const port = process.env.PORT || 8080;
+
+let contacts;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -17,9 +20,18 @@ app.get("/api/contacts", function (req, res) {
     path.join(__dirname, "public/contactsdatabase.json"),
     "utf-8"
   );
-  const contacts = JSON.parse(contactsFile);
+  contacts = JSON.parse(contactsFile);
   res.send(contacts.people);
 });
+
+// app.get("/api/contacts", function (req, res) {
+//   const contactsFile = fs.readFileSync(
+//     path.join(__dirname, "public/contactsdatabase.json"),
+//     "utf-8"
+//   );
+//   const contacts = JSON.parse(contactsFile);
+//   res.send(contacts.people);
+// });
 
 app.get("/dashboard", function (req, res) {
   res.sendFile(path.join(__dirname, "/dashboard.html"));
@@ -39,8 +51,8 @@ app.get("/database/contacts.js", function (req, res) {
   res.sendFile(path.join(__dirname + "/contacts.js"));
 });
 
-app.get("/addcontacts", function (req, res) {
-  res.sendFile(path.join(__dirname, "/addcontacts.html"));
+app.get("/addcontactssuccesspage", function (req, res) {
+  res.sendFile(path.join(__dirname, "/addcontactssuccesspage.html"));
 });
 
 app.get("/public/contactslist", function (req, res) {
@@ -73,9 +85,22 @@ app.use(express.static(__dirname + "/public/js"));
 app.use(express.static(__dirname + "/public/js/demo"));
 app.use(express.static(__dirname + "/public/images"));
 
-//app.post('/addcontacts', (req, res) => {
-//  console.log('Posting from addcontacts')
-//})
+app.post("/api/addcontacts", (req, res) => {
+  console.log("Posting from addcontacts");
+  //console.log(req.body);
+  contacts.people.push(req.body);
+
+  fs.writeFileSync("contactsdatabase.json", JSON.stringify(contacts), (err) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(contacts);
+    console.log("file written successfully");
+  });
+
+  res.redirect("/contacts");
+});
 
 app.listen(port);
 console.log("Server started at http://localhost:" + port);

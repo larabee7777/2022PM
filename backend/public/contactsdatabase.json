@@ -1,1 +1,74 @@
-{"people": [{"id":0,"name":"Lara Whybrow","unit":"32","contactnumber":"0714845295","email":"lara.whybrow@gmail.com","role":["trustee"]},{"id":1,"name":"Owner 21","unit":"21","contactnumber":"0714845295","email":"lara.whybrow@gmail.com","role":["owner"]},{"id":2,"name":"Tenant 25","unit":"25","contactnumber":"0714845295","email":"lara.whybrow@gmail.com","role":["tenant"]},{"id":3,"name":"MidCity","unit":"na","contactnumber":"0714845295","email":"lara.whybrow@gmail.com","role":["serviceprovider"]},{"id":4,"name":"Alpheus","unit":"Staff Quarters","contactnumber":"0714845295","email":"na","role":["employee"]},{"id":5,"name":"delete5","unit":"deletedunit","contactnumber":"0000000000","email":"na","role":["employee"]},{"id":6,"name":"delete6","unit":"deletedunit","contactnumber":"0000000000","email":"na","role":["employee"]}]}
+{
+  "people": [
+    {
+      "id": 0,
+      "authorized": "true",
+      "password": "lotus",
+      "name": "Lara Whybrow",
+      "unit": "32",
+      "contactnumber": "0714845295",
+      "email": "lara.whybrow@gmail.com",
+      "role": ["trustee"]
+    },
+    {
+      "id": 1,
+      "authorized": "false",
+      "password": "",
+      "name": "Owner 21",
+      "unit": "21",
+      "contactnumber": "0714845295",
+      "email": "lara.whybrow@gmail.com",
+      "role": ["owner"]
+    },
+    {
+      "id": 2,
+      "authorized": "false",
+      "password": "",
+      "name": "Tenant 25",
+      "unit": "25",
+      "contactnumber": "0714845295",
+      "email": "lara.whybrow@gmail.com",
+      "role": ["tenant"]
+    },
+    {
+      "id": 3,
+      "authorized": "false",
+      "password": "",
+      "name": "MidCity",
+      "unit": "na",
+      "contactnumber": "0714845295",
+      "email": "lara.whybrow@gmail.com",
+      "role": ["serviceprovider"]
+    },
+    {
+      "id": 4,
+      "authorized": "false",
+      "password": "",
+      "name": "Alpheus",
+      "unit": "Staff Quarters",
+      "contactnumber": "0714845295",
+      "email": "na",
+      "role": ["employee"]
+    },
+    {
+      "id": 5,
+      "name": "delete5",
+      "authorized": "false",
+      "password": "",
+      "unit": "deletedunit",
+      "contactnumber": "0000000000",
+      "email": "na",
+      "role": ["employee"]
+    },
+    {
+      "id": 6,
+      "name": "delete6",
+      "authorized": "false",
+      "password": "",
+      "unit": "deletedunit",
+      "contactnumber": "0000000000",
+      "email": "na",
+      "role": ["employee"]
+    }
+  ]
+}

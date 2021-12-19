@@ -8,79 +8,6 @@ jQuery(document).ready(function () {
 });
 
 /*
-contacts = [
-  {
-      id:0,
-      name: "Lara Whybrow",
-      unit: "32",
-      contactnumber: "0714845295",
-      email:"lara.whybrow@gmail.com",
-      role:["trustee"]
-      
-  },
-  {
-      id:1,
-      name: "Owner 21",
-      unit: "21",
-      contactnumber: "0714845295",
-      email:"lara.whybrow@gmail.com",
-      role:["owner"]
-      
-  },
-  {   
-      id:2,
-      name: "Tenant 25",
-      unit: "25",
-      contactnumber: "0714845295",
-      email:"lara.whybrow@gmail.com",
-      role:["tenant"]
-      
-  },
-  {
-      id:3,
-      name: "MidCity",
-      unit: "na",
-      contactnumber: "0714845295",
-      email:"lara.whybrow@gmail.com",
-      role:["serviceprovider"]
-      
-  },
-  {
-      id:4,
-      name: "Alpheus",
-      unit: "Staff Quarters",
-      contactnumber: "0714845295",
-      email:"na",
-      role:["employee"]
-      
-  },
-  {
-      id:5,
-      name: "delete5",
-      unit: "deletedunit",
-      contactnumber: "0000000000",
-      email:"na",
-      role:["employee"]
-      
-  },
-  {
-      id:6,
-      name: "delete6",
-      unit: "deletedunit",
-      contactnumber: "0000000000",
-      email:"na",
-      role:["employee"]
-      
-  }
-
-
-
-];
-
-
-*/
-
-/*
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -88,20 +15,12 @@ function handleSubmit(event) {
 
   const value = Object.fromEntries(data.entries());
 
-  function addContact () {
-    fs.appendFile('contactsdatabase', value , function (err) {
-      if (err) throw err;
-      console.log('Updated!');
-    });
-
-    
-    addContact();
-
   console.log({ value });
 }
-}
-const form = document.querySelector('form');
-form.addEventListener('submit', handleSubmit);
+
+
+const form = document.querySelector("form");
+form.addEventListener("submit", handleSubmit);
 
 */
 
