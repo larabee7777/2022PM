@@ -97,7 +97,7 @@ app.post("/api/addcontacts", (req, res) => {
     contacts.people.push(req.body);
 
     fs.writeFileSync(
-      path.join(__dirname, "public/contactsdatabase.json"),
+      "contactsdatabase.json",
       JSON.stringify(contacts),
       "utf-8"
     );

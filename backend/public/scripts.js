@@ -1,11 +1,15 @@
-let contacts = [];
+var contacts = [];
 
-jQuery(document).ready(function () {
-  jQuery.get("http://localhost:8080/api/contacts", function (res) {
-    contacts = res;
-    listContacts(contacts);
+function refreshContacts() {
+  jQuery(document).ready(function () {
+    jQuery.get("http://localhost:8080/api/contacts", function (res) {
+      contacts = res;
+      listContacts(contacts);
+    });
   });
-});
+}
+
+refreshContacts();
 
 /*
 function handleSubmit(event) {
